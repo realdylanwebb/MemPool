@@ -28,7 +28,7 @@ mem_pool_t *pool;
 PINIT(pool, 256)
 
 //allocating memory
-struct your_type* foo;
+struct your_type *foo;
 PALLOC(pool, your_type, next_field, foo)
 
 //freeing memory
