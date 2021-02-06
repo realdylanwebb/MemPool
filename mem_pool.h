@@ -89,9 +89,11 @@ typedef struct mem_pool {
             _pool->size_left = _pool->block_s;                              \
         }                                                                   \
         _ptr = _pool->current_start;                                        \
-        cast = (_type *) _pool->current_start;                              \
-        cast++;                                                             \
-        _pool->size_left -= 1;                                              \
+        if (_ptr != NULL) {                                                 \
+            cast = (_type *) _pool->current_start;                          \
+            cast++;                                                         \
+            _pool->size_left -= 1;                                          \      
+        }                                                                   \
     }                                                                       \
     _ptr->_next = NULL; 
 
