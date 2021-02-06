@@ -93,6 +93,8 @@ typedef struct mem_pool {
             cast = (_type *) _pool->current_start;                          \
             cast++;                                                         \
             _pool->size_left -= 1;                                          \      
+        } else {                                                            \
+            _pool->size_left = 0;                                           \
         }                                                                   \
     }                                                                       \
     _ptr->_next = NULL; 
