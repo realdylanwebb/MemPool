@@ -30,6 +30,10 @@ PINIT(pool, 256)
 //allocating memory
 struct your_type *foo;
 PALLOC(pool, your_type, next_field, foo)
+if (foo == NULL) {
+  //allocation failed, check errno for more info
+  //see man calloc(3)
+}
 
 //freeing memory
 PFREE(pool, next_field, foo)
