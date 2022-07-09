@@ -1,4 +1,4 @@
-# dMemPool
+# MemPool
 Memory pooling macros
 
 ## Usage
