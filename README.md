@@ -1,5 +1,5 @@
 # dMemPool
-Single header generic memory pooling :)
+Memory pooling macros
 
 ## Usage
 mem_pool.h contains one struct and 4 macros.
